@@ -3,6 +3,7 @@ __pycache__/
 *.py[codz]
 *$py.class
 # Ignore models results
+Resultados
 
 # C extensions
 *.so
