@@ -19,15 +19,15 @@ O experimento busca identificar o modelo que oferece o melhor equilíbrio entre 
 ------------------------------------------------------------
 ⚙️ Modelos testados
 
-Modelo               | RMSE          | MAE           | R²
-----------------------|---------------|---------------|---------
-Linear Regression     | 8.48e+08      | 15711.5       | 0.894
-Ridge                 | 8.27e+08      | 16158.6       | 0.897
-Lasso                 | 8.41e+08      | 15674.4       | 0.895
-Random Forest         | 7.11e+08      | 15906.5       | 0.911
-XGBoost               | 6.85e+08      | 15534.9       | 0.914
-Random Forest (Optuna)| 7.22e+08      | 15831.6       | 0.910
-XGBoost (Optuna)      | 6.06e+08      | 13766.8       | 0.924
+| Modelo                     | RMSE     | MAE     | R²     |
+| -------------------------- | -------- | ------- | ------ |
+| **XGBoost (Optuna)**       | 5.46e+08 | 13739.2 | 0.9319 |
+| **XGBoost**                | 6.86e+08 | 15535.0 | 0.9145 |
+| **Random Forest**          | 7.11e+08 | 15906.6 | 0.9113 |
+| **Random Forest (Optuna)** | 7.27e+08 | 15879.7 | 0.9093 |
+| **Ridge**                  | 8.27e+08 | 16158.6 | 0.8968 |
+| **Lasso**                  | 8.41e+08 | 15674.4 | 0.8950 |
+| **Linear Regression**      | 8.49e+08 | 15711.5 | 0.8941 |
 
 ------------------------------------------------------------
 🔍 Conclusões iniciais
@@ -74,11 +74,31 @@ O experimento pode ser facilmente reproduzido ajustando os parâmetros no notebo
 ```
 
 ------------------------------------------------------------
+🧩 Testando o modelo treinado
+
+Os modelos otimizados estão disponíveis na pasta:
+
+Resultados/
+├── best_random_forest_optuna.joblib
+└── best_xgboost_optuna.joblib
+
+Para validar o modelo XGBoost otimizado, utilize o script testando_modelo.py.
+Este arquivo cria um exemplo de imóvel com características conhecidas e gera a previsão de preço com base no modelo salvo.
+
+```bash
+   python testando_modelo.py
+```
+
+Saída esperada:
+
+💰 Preço estimado do imóvel: X
+
+------------------------------------------------------------
 ✍️ Autores
 
-Anderson Passos  
-Francisco Colatino  
-Jônatas Duarte  
+Anderson da Silva Passos  
+Francisco Colatino de Lima
+Jônatas Duarte Vital Leite  
 
 ------------------------------------------------------------
 Universidade Federal de Alagoas — 2025  
